@@ -6,7 +6,7 @@
 				<ul>
 					<li><a href="#">首页</a></li>
 					<li>
-						<a href="#">区块链</a>
+						<a href="#">区块链<i class="ion-ios-arrow-down"></i></a>
 						<ul class="subMenu">
 							<li><a href="#">查询区块</a></li>
 							<li><a href="#">查询叔块</a></li>
@@ -17,7 +17,7 @@
 						</ul>
 					</li>
 					<li>
-						<a href="#">地址</a>
+						<a href="#">地址<i class="ion-ios-arrow-down"></i></a>
 						<ul class="subMenu">
 							<li><a href="#">地址列表</a></li>
 							<li><a href="#">普通地址</a></li>
@@ -25,7 +25,7 @@
 						</ul>
 					</li>
 					<li>
-						<a href="#">代币</a>
+						<a href="#">代币<i class="ion-ios-arrow-down"></i></a>
 						<ul class="subMenu">
 							<li><a href="#">代币列表</a></li>
 							<li><a href="#">代币交易</a></li>
@@ -61,11 +61,11 @@ export default {
 }
 
 hr{
-	border: 1.5px solid rgba(104,114,114,.2);
+	border: 1px solid rgba(104,114,114,.2);
 	border-top: none;
 	border-left: none;
 	border-right: none;
-	margin:4px 8px 8px 8px;
+	margin:4px 10px 8px 10px;
 }
 
 nav{
@@ -103,7 +103,7 @@ nav{
 	color:#455f75;
 }
 .navTab a:hover{
-	color:#4c6bd8;
+	color: #4c6bd8;
 }
 
 .subMenu{
@@ -120,6 +120,11 @@ nav{
 	border: 1px solid rgba(214,214,214,.6);
 }
 
+.navTab ul li:hover a .ion-ios-arrow-down{
+	transform: rotate(180deg) translate(0,-0.1px);
+	transition: .2s;
+}
+
 .subMenu li{
 	display: block;
 	width: 150px;
@@ -133,13 +138,13 @@ nav{
 
 .searchContainer{
   margin:10px auto;
-  width: 88%;
+  width: 90%;
 }
 
 .ion-ios-search-strong{
 	display: block;
-	float:left;
-	padding-right: 1%;
+	float: left;
+	padding-right: 1.3%;
 }
 
 input[type="search"]{
@@ -153,6 +158,13 @@ input[type="search"]{
   border-right:none;
   padding: 2px 0 10px 0;
   color: #455f75;
+}
+
+.ion-ios-arrow-down{
+	display: inline-block;
+	margin-left: 10px;
+	transform: translate(0,1.5px);
+	transition: .1s;
 }
 
 input[type="search"]::-webkit-input-placeholder { /* WebKit, Blink, Edge */

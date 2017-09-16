@@ -24,7 +24,7 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #455f75;
+  color: #4b5963;
   font-weight: 500;
 }
 
