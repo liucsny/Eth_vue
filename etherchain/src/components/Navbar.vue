@@ -1,15 +1,38 @@
 <template>
 	<nav>
 		<div class="container">
-			<img src="../assets/logo.svg" id="logo">
+			<a href="#"><div class="logoDiv"><img src="../assets/logo.svg" id="logo"></div></a>
 			<div class="navTab">
 				<ul>
-					<a href="#"><div class="navUnderline"><li>首页</li></div></a>
-					<a href="#"><div class="navUnderline"><li>区块链</li></div></a>
-					<a href="#"><div class="navUnderline"><li>地址</li></div></a>
-					<a href="#"><div class="navUnderline"><li>代币</li></div></a>
-					<a href="#"><div class="navUnderline"><li>图表</li></div></a>
-					<a href="#"><div class="navUnderline"><li>其他</li></div></a>
+					<li><a href="#">首页</a></li>
+					<li>
+						<a href="#">区块链</a>
+						<ul class="subMenu">
+							<li><a href="#">查询区块</a></li>
+							<li><a href="#">查询叔块</a></li>
+							<li><a href="#">查询完成交易</a></li>
+							<li><a href="#">查询进行交易</a></li>
+							<li><a href="#">查询合约内交易</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">地址</a>
+						<ul class="subMenu">
+							<li><a href="#">地址列表</a></li>
+							<li><a href="#">普通地址</a></li>
+							<li><a href="#">合约地址</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">代币</a>
+						<ul class="subMenu">
+							<li><a href="#">代币列表</a></li>
+							<li><a href="#">代币交易</a></li>
+							<li><a href="#">代币持有者</a></li>
+						</ul>
+					</li>
+					<li><a href="#">图表</a></li>
+					<li><a href="#">其他</a></li>
 				</ul>
 			</div>
 		</div>
@@ -21,44 +44,87 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
+#logo{
+	height: 42px;
+	width: auto;
+	display:inline-block;
+}
+.logoDiv{
+	display: inline-block;
+	padding: 14px 18px 12px 10px;
+}
+
 nav{
+	margin: 0;
+	box-sizing: border-box;
 	background: white;
-	height: 70px;
+	height: 68px;
     box-shadow: 0 1px 3px 0 rgba(0,34,77,.05);
 	border-bottom: 1px solid rgba(214,214,214,.6);
 	padding: 1px;
 }
 
-#logo{
-	height: 42px;
-	width: auto;
-	margin-top: 16px;
-	display: inline-block;
-	float: left;
-}
-
 .navTab{
 	font-size: 14px;
-	display: inline-block;
-	ul{
-		margin:0;
-		.navUnderline{
-			display: inline-block;
-			float: left;
-			li{
-				list-style: none;
-				margin: 0 24px 24px 24px;
-				padding-top: 28px;
-				float:left;
-				color: #455f75;
-			}
-		}
-		.navUnderline:hover{
-			li{
-				color: #4c6bd8;
-			}
-		}
-	}
+	display:inline-block;
+	position: absolute;
 }
+
+.navTab ul{
+	padding: 0;
+	margin: 0;
+}
+
+.navTab li{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display:inline-block;
+}
+
+.navTab a{
+	display: inline-block;
+	padding: 26px 24px;
+	text-decoration: none;
+	color:#455f75;
+}
+.navTab a:hover{
+	color:#4c6bd8;
+}
+
+.subMenu{
+	display: none;
+	position: absolute;
+	top: 62px;
+}
+
+.navTab ul li:hover .subMenu{
+	display: block;
+	background-color: white;
+	padding: 8px 0;
+    box-shadow: 0 1px 3px 0 rgba(0,34,77,.1);
+	border: 1px solid rgba(214,214,214,.6);
+}
+
+.subMenu li{
+	display: block;
+	width: 150px;
+	line-height: 0px;
+	/*border:solid red .1px;*/
+}
+
+.subMenu li a{
+	padding: 24px;
+}
+
 </style>
+
+
+
+
+
+
+
+
+
