@@ -36,6 +36,10 @@
 					<li><a href="#">其他</a></li>
 				</ul>
 			</div>
+			<div class="searchContainer">		    
+				<i class="ion-ios-search-strong"></i>
+		    	<input type="search" placeholder="搜索以太坊地址、交易、区块、代币">
+	    	</div>
 		</div>
 	</nav>
 </template>
@@ -57,11 +61,11 @@ export default {
 }
 
 hr{
-	border-color: rgba(104,114,114,.2);
+	border: 1.5px solid rgba(104,114,114,.2);
 	border-top: none;
 	border-left: none;
 	border-right: none;
-	margin:2px 8px 6px 8px;
+	margin:4px 8px 8px 8px;
 }
 
 nav{
@@ -127,6 +131,51 @@ nav{
 	padding: 24px;
 }
 
+.searchContainer{
+  margin:10px auto;
+  width: 88%;
+}
+
+.ion-ios-search-strong{
+	display: block;
+	float:left;
+	padding-right: 1%;
+}
+
+input[type="search"]{
+  display: block;
+  outline:none;
+  width: 97%;
+  font-size: 14px;
+  font-weight: 500;
+  border-top:none;
+  border-left:none;
+  border-right:none;
+  padding: 2px 0 10px 0;
+  color: #455f75;
+}
+
+input[type="search"]::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #d1d1d1;
+}
+input[type="search"]::-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #d1d1d1;
+   opacity:  1;
+}
+input[type="search"]::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #d1d1d1;
+   opacity:  1;
+}
+input[type="search"]::-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #d1d1d1;
+}
+input[type="search"]::-ms-input-placeholder { /* Microsoft Edge */
+   color:    #d1d1d1;
+}
+
+input[type="search"]:focus{
+	  border-bottom: solid #4c6bd8 1.5px;
+}
 </style>
 
 
