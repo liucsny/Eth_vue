@@ -10,6 +10,7 @@
 						<ul class="subMenu">
 							<li><a href="#">查询区块</a></li>
 							<li><a href="#">查询叔块</a></li>
+							<hr/>
 							<li><a href="#">查询完成交易</a></li>
 							<li><a href="#">查询进行交易</a></li>
 							<li><a href="#">查询合约内交易</a></li>
@@ -55,6 +56,14 @@ export default {
 	padding: 14px 18px 12px 10px;
 }
 
+hr{
+	border-color: rgba(104,114,114,.2);
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	margin:2px 8px 6px 8px;
+}
+
 nav{
 	margin: 0;
 	box-sizing: border-box;
@@ -96,13 +105,13 @@ nav{
 .subMenu{
 	display: none;
 	position: absolute;
-	top: 62px;
+	top: 56px;
 }
 
 .navTab ul li:hover .subMenu{
 	display: block;
 	background-color: white;
-	padding: 8px 0;
+	padding: 6px 0;
     box-shadow: 0 1px 3px 0 rgba(0,34,77,.1);
 	border: 1px solid rgba(214,214,214,.6);
 }
