@@ -103,7 +103,7 @@ nav{
 	color:#455f75;
 }
 .navTab a:hover{
-	color: #4c6bd8;
+	color: #1038ff;
 }
 
 .subMenu{

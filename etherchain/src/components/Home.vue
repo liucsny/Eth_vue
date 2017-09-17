@@ -21,15 +21,16 @@
           </div>
           <hr>
           <div class="blockData" v-for="item in blocks.data">
-            <a href="#"><div class="blueBlock"><div>{{item[0].name}} {{item[0].val}}</div></div></a>
+            <a href="#"><div class="blueBlock">{{item[0].name}} {{item[0].val}}</div></a>
             <div class="blockDetail">
-              <div>{{item[1].name}}: <a href="#"><div class="underline">{{compressString(item[1].val,10)}}</div></a></div>
+              <div>{{item[1].name}}: <a href="#"><div class="underline">{{compressString(item[1].val,12)}}</div></a></div>
               <div>{{item[2].name}}: <a href="#"><div class="underline">{{item[2].val}}{{item[2].unit}}</div></a></div>
             </div>
             <div class="blockTime">
               <div>{{item[3].val}}{{item[3].unit}}</div>
             </div>
           </div>
+          <a href="#"><div class="morePlus"><div class="ion-android-add"></div></div></a>
         </div>
       </div>
       <div class="col-md-6">
@@ -39,6 +40,17 @@
             <div class="cardTitle">{{transactions.title}}</div>
           </div>
           <hr>
+          <div class="blockData" v-for="item in transactions.data">
+            <div class="txnBlockThin"></div>
+            <div class="blockDetail">
+              <div class="txnAmount">{{item[0].val}}  {{item[0].unit}}</div>
+              <div class="txnHash">{{item[1].name}}: <a href="#"><div class="underline">{{compressString(item[1].val,20)}}</div></a></div>
+            </div>
+            <div class="txnTime">
+              <div>{{item[2].val}}{{item[2].unit}}</div>
+            </div>
+          </div>
+          <a href="#"><div class="morePlus"><div class="ion-android-add"></div></div></a>
         </div>
       </div>
     </div>
@@ -96,6 +108,33 @@ export default {
       },
       transactions:{
         title:"交易",
+        data:[
+          [
+            {name:"数额",val:44.78,unit:"Ether"},
+            {name:"交易哈希",val:"0x829BD824B016326A401d083B33D092293333A830",unit:""},
+            {name:"时间",val:3,unit:"分钟前"},
+          ],
+          [
+            {name:"数额",val:0.8,unit:"Ether"},
+            {name:"交易哈希",val:"0x829BD824B016326A401d083B33D092293333A830",unit:""},
+            {name:"时间",val:3,unit:"分钟前"},
+          ],
+          [
+            {name:"数额",val:0,unit:"Ether"},
+            {name:"交易哈希",val:"0x829BD824B016326A401d083B33D092293333A830",unit:""},
+            {name:"时间",val:3,unit:"分钟前"},
+          ],
+          [
+            {name:"数额",val:4.9080967,unit:"Ether"},
+            {name:"交易哈希",val:"0x829BD824B016326A401d083B33D092293333A830",unit:""},
+            {name:"时间",val:3,unit:"分钟前"},
+          ],
+          [
+            {name:"数额",val:10.898,unit:"Ether"},
+            {name:"交易哈希",val:"0x829BD824B016326A401d083B33D092293333A830",unit:""},
+            {name:"时间",val:3,unit:"分钟前"},
+          ],
+        ]
       },
     }
   },
@@ -161,7 +200,7 @@ export default {
   display: inline-block;
 }
 .underline:hover{
-  border-bottom: 1.4px #4c6bd8 solid;
+  border-bottom: 1.4px #1038ff solid;
 }
 
 .cardUnit{
@@ -187,7 +226,7 @@ a{
   color:#4b5963;
 }
 a:hover{
-  color: #4c6bd8;
+  color: #1038ff;
 }
 hr{
   border: 1px solid rgba(104,114,114,.2);
@@ -198,10 +237,10 @@ hr{
 }
 
 .blockData{
-  display: flex;
   height:78px;
   background-color: #f5f8fc;
   margin:10px 0;
+  padding: 0;
 }
 
 .blueBlock{
@@ -210,15 +249,19 @@ hr{
   height:100%;
   color:white;
   font-size: 14px;
+  /*display: inline-block;*/
+  float: left;
 }
-.blueBlock:hover > div{
-  border-bottom: solid white 1px;
+.blueBlock:hover {
+  background-color: #1038ff;
 }
 
 .blockDetail{
   color: #77848c;
   font-size: 14px;
   padding: 20px;
+  float: left;
+  /*display: inline-block;*/
 }
 .blockDetail div{
   height: 22px;
@@ -226,10 +269,56 @@ hr{
 .blockDetail a{
   color: #4c6bd8;
 }
-
+.blockDetail a:hover{
+  color: #1038ff;
+}
 .blockTime{
   color: #77848c;
   font-size: 12px;
-  padding: 20px 20px 20px 50px;
+  padding: 20px;
+  float: right;
+}
+
+.txnBlockThin{
+  background-color: #4c6bd8;
+  padding:2px;
+  height:100%;
+  float: left;
+}
+.txnAmount{
+  color:#4b5963;
+  font-size: 16px;  
+  display: inline-block;
+  padding-bottom: 4px;
+}
+.txnHash{
+  font-size: 12px;
+}
+
+.txnTime{
+  color: #77848c;
+  font-size: 12px;
+  padding: 20px;
+  float: right;
+}
+.morePlus{
+  height:26px;
+  background-color: #f5f8fc;
+  margin:10px 0 0 0;
+  padding: 0;
+  text-align: center;
+  padding:1px;
+}
+.ion-android-add{
+  color: #4c6bd8;
+  margin-top: 2px;
+}
+
+.morePlus:hover{
+  background-color: #4c6bd8;
+}
+
+.morePlus:hover .ion-android-add{
+  color: #fff;
 }
 </style>
