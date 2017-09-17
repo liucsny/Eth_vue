@@ -69,7 +69,7 @@ hr{
 }
 
 nav{
-	margin: 0;
+	margin: 0 0 60px 0;
 	box-sizing: border-box;
 	background: white;
 	height: 68px;
@@ -138,7 +138,7 @@ nav{
 
 .searchContainer{
   margin:10px auto;
-  width: 90%;
+  width: 94%;
 }
 
 .ion-ios-search-strong{
