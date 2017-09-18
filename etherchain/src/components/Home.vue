@@ -54,10 +54,15 @@
         </div>
       </div>
     </div>
+<<<<<<< HEAD
     <app-cardCarousel></app-cardCarousel>
     <div class="mainCard">
       
     </div>
+=======
+    <app-cardCarousel v-bind:cards="cardCarousel" ></app-cardCarousel>
+    <!-- <img v-attr="src:cardCarousel[0].data.img" alt=""> -->
+>>>>>>> 062bfebad908a4ef64c6a5bf2b182fe6ea8c30fe
   </div>
 </template>
 
@@ -67,7 +72,11 @@ import cardCarousel from "./cardCarousel.vue"
 export default {
   name: 'hello',
   components:{
+<<<<<<< HEAD
     "app-cardCarousel": cardCarousel,
+=======
+    "app-cardCarousel":cardCarousel,
+>>>>>>> 062bfebad908a4ef64c6a5bf2b182fe6ea8c30fe
   },
   data:function(){
     return{
@@ -145,6 +154,96 @@ export default {
           ],
         ]
       },
+      cardCarousel:[
+        {
+          name:"OmiseGO",
+          data:{
+            img:require('../assets/tokens/omg.svg'),
+            price:{
+              val:54.34,
+              change:-2.32,
+              unit:"¥",
+            },
+          },
+        },
+        {
+          name:"OmiseGO",
+          data:{
+            img:require('../assets/tokens/omg.svg'),
+            price:{
+              val:54.34,
+              change:-2.32,
+              unit:"¥",
+            },
+          },
+        },
+        {
+          name:"OmiseGO",
+          data:{
+            img:require('../assets/tokens/omg.svg'),
+            price:{
+              val:54.34,
+              change:-2.32,
+              unit:"¥",
+            },
+          },
+        },
+        {
+          name:"OmiseGO",
+          data:{
+            img:require('../assets/tokens/omg.svg'),
+            price:{
+              val:54.34,
+              change:-2.32,
+              unit:"¥",
+            },
+          },
+        },
+        {
+          name:"OmiseGO",
+          data:{
+            img:require('../assets/tokens/omg.svg'),
+            price:{
+              val:54.34,
+              change:-2.32,
+              unit:"¥",
+            },
+          },
+        },
+        {
+          name:"OmiseGO",
+          data:{
+            img:require('../assets/tokens/omg.svg'),
+            price:{
+              val:54.34,
+              change:-2.32,
+              unit:"¥",
+            },
+          },
+        },
+        {
+          name:"OmiseGO",
+          data:{
+            img:require('../assets/tokens/omg.svg'),
+            price:{
+              val:54.34,
+              change:-2.32,
+              unit:"¥",
+            },
+          },
+        },
+        {
+          name:"OmiseGO",
+          data:{
+            img:require('../assets/tokens/omg.svg'),
+            price:{
+              val:54.34,
+              change:-2.32,
+              unit:"¥",
+            },
+          },
+        },
+      ],
     }
   },
   methods:{
@@ -163,7 +262,11 @@ export default {
   box-shadow: 0 1px 3px 0 rgba(0,34,77,.05);
   border: 1px solid rgba(214,214,214,.6);
   padding: 40px 45px 30px 45px;
+<<<<<<< HEAD
   margin: 20px auto;
+=======
+  margin: 16px auto 10px auto;
+>>>>>>> 062bfebad908a4ef64c6a5bf2b182fe6ea8c30fe
   background-color: #fff;
 }
 .narrow{
@@ -176,7 +279,11 @@ export default {
   border: 1px solid rgba(214,214,214,.6);
   padding: 40px 45px 30px 45px;
   width: 100%;
+<<<<<<< HEAD
   margin: 0 auto;
+=======
+  margin: 10px auto;
+>>>>>>> 062bfebad908a4ef64c6a5bf2b182fe6ea8c30fe
 }
 
 

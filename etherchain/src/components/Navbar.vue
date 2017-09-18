@@ -148,6 +148,7 @@ nav{
 }
 
 input[type="text"]{
+<<<<<<< HEAD
 	display: block;
 	outline:none;
 	width: 97%;
@@ -159,6 +160,18 @@ input[type="text"]{
 	padding: 2px 0 10px 0;
 	margin-top: 14px;
 	color: #455f75;
+=======
+  display: block;
+  outline:none;
+  width: 97%;
+  font-size: 14px;
+  font-weight: 500;
+  border-top:none;
+  border-left:none;
+  border-right:none;
+  padding: 2px 0 10px 0;
+  color: #455f75;
+>>>>>>> 062bfebad908a4ef64c6a5bf2b182fe6ea8c30fe
 }
 
 .ion-ios-arrow-down{
