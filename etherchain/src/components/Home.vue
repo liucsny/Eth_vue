@@ -54,12 +54,21 @@
         </div>
       </div>
     </div>
+    <app-cardCarousel></app-cardCarousel>
+    <div class="mainCard">
+      
+    </div>
   </div>
 </template>
 
 <script>
+import cardCarousel from "./cardCarousel.vue"
+
 export default {
   name: 'hello',
+  components:{
+    "app-cardCarousel": cardCarousel,
+  },
   data:function(){
     return{
       ethereum:{
@@ -154,7 +163,7 @@ export default {
   box-shadow: 0 1px 3px 0 rgba(0,34,77,.05);
   border: 1px solid rgba(214,214,214,.6);
   padding: 40px 45px 30px 45px;
-  margin: 0 auto;
+  margin: 20px auto;
   background-color: #fff;
 }
 .narrow{
@@ -167,7 +176,7 @@ export default {
   border: 1px solid rgba(214,214,214,.6);
   padding: 40px 45px 30px 45px;
   width: 100%;
-  margin: 20px auto 0 auto;
+  margin: 0 auto;
 }
 
 
@@ -315,7 +324,7 @@ hr{
 }
 
 .morePlus:hover{
-  background-color: #4c6bd8;
+  background-color: #1038ff;
 }
 
 .morePlus:hover .ion-android-add{

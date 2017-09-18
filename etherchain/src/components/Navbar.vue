@@ -38,7 +38,7 @@
 			</div>
 			<div class="searchContainer">		    
 				<i class="ion-ios-search-strong"></i>
-		    	<input type="search" placeholder="搜索以太坊地址、交易、区块、代币">
+		    	<input type="text" placeholder="搜索以太坊地址、交易、区块、代币">
 	    	</div>
 		</div>
 	</nav>
@@ -57,7 +57,7 @@ export default {
 }
 .logoDiv{
 	display: inline-block;
-	padding: 14px 18px 12px 10px;
+	padding: 18px 18px 12px 10px;
 }
 
 hr{
@@ -72,7 +72,7 @@ nav{
 	margin: 0 0 60px 0;
 	box-sizing: border-box;
 	background: white;
-	height: 68px;
+	height: 78px;
     box-shadow: 0 1px 3px 0 rgba(0,34,77,.05);
 	border-bottom: 1px solid rgba(214,214,214,.6);
 	padding: 1px;
@@ -98,7 +98,7 @@ nav{
 
 .navTab a{
 	display: inline-block;
-	padding: 26px 24px;
+	padding: 32px 24px;
 	text-decoration: none;
 	color:#455f75;
 }
@@ -109,7 +109,7 @@ nav{
 .subMenu{
 	display: none;
 	position: absolute;
-	top: 56px;
+	top: 64px;
 }
 
 .navTab ul li:hover .subMenu{
@@ -147,17 +147,18 @@ nav{
 	padding-right: 1.3%;
 }
 
-input[type="search"]{
-  display: block;
-  outline:none;
-  width: 97%;
-  font-size: 14px;
-  font-weight: 500;
-  border-top:none;
-  border-left:none;
-  border-right:none;
-  padding: 2px 0 10px 0;
-  color: #455f75;
+input[type="text"]{
+	display: block;
+	outline:none;
+	width: 97%;
+	font-size: 14px;
+	font-weight: 500;
+	border-top:none;
+	border-left:none;
+	border-right:none;
+	padding: 2px 0 10px 0;
+	margin-top: 14px;
+	color: #455f75;
 }
 
 .ion-ios-arrow-down{
@@ -167,25 +168,25 @@ input[type="search"]{
 	transition: .1s;
 }
 
-input[type="search"]::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+input[type="text"]::-webkit-input-placeholder { /* WebKit, Blink, Edge */
     color:    #d1d1d1;
 }
-input[type="search"]::-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+input[type="text"]::-moz-placeholder { /* Mozilla Firefox 4 to 18 */
    color:    #d1d1d1;
    opacity:  1;
 }
-input[type="search"]::-moz-placeholder { /* Mozilla Firefox 19+ */
+input[type="text"]::-moz-placeholder { /* Mozilla Firefox 19+ */
    color:    #d1d1d1;
    opacity:  1;
 }
-input[type="search"]::-ms-input-placeholder { /* Internet Explorer 10-11 */
+input[type="text"]::-ms-input-placeholder { /* Internet Explorer 10-11 */
    color:    #d1d1d1;
 }
-input[type="search"]::-ms-input-placeholder { /* Microsoft Edge */
+input[type="text"]::-ms-input-placeholder { /* Microsoft Edge */
    color:    #d1d1d1;
 }
 
-input[type="search"]:focus{
+input[type="text"]:focus{
 	  border-bottom: solid #4c6bd8 1.5px;
 }
 </style>
