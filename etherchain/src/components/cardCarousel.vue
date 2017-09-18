@@ -1,33 +1,38 @@
 <template>
 	<div class="mainCard">
-<<<<<<< HEAD
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt placeat, doloremque explicabo alias deserunt, eveniet iusto, atque nobis quis, autem accusamus iste aut molestias? Ullam praesentium in vel eum dicta?</p>
-=======
 		<div class="cutCard">
+			<slot></slot>
 			<div class="cardCarousel">
 				<div v-for="token in cards" class="card">
 					<a href="#">
 						<img :src="token.data.img" alt="tokenimg">
 						<div class="tokenCardTitle">{{token.name}}</div>
+						<div>{{token.data.price.unit}}{{token.data.price.val}}<div class="change">{{token.data.price.change}}</div></div>
 					</a>
 				</div>
 			</div>
 		</div>
->>>>>>> 062bfebad908a4ef64c6a5bf2b182fe6ea8c30fe
 	</div>
 </template>
 
 <script>
 export default{
-<<<<<<< HEAD
-	data: function(argument) {
-		return {
-
+	props:["cards"],
+	methods:{
+	},
+	watch:{
+	},
+	mounted:function(){
+		let elemChanged = document.getElementsByClassName('change');
+		for(let ele of elemChanged){
+			if(ele.innerHTML>0){
+				ele.style.color="green";
+				ele.innerHTML = "+" + ele.innerHTML;
+			}else{
+				ele.style.color="red";
+			}
 		}
 	}
-=======
-	props:["cards"],
->>>>>>> 062bfebad908a4ef64c6a5bf2b182fe6ea8c30fe
 }
 </script>
 
@@ -35,12 +40,7 @@ export default{
 .mainCard{
 	box-shadow: 0 1px 3px 0 rgba(0,34,77,.05);
 	border: 1px solid rgba(214,214,214,.6);
-	padding: 40px 45px 30px 45px;
-<<<<<<< HEAD
-	margin: 20px auto;
-	background-color: #fff;
-}
-=======
+	padding: 20px 45px 30px 45px;
 	margin: 10px auto;
 	background-color: #fff;
 }
@@ -53,6 +53,7 @@ export default{
 .cardCarousel{
 	/*border:red 1px solid;*/
 	width:1630px;
+	margin-top: 30px;
 	transition: .5s;
 }
 
@@ -66,8 +67,8 @@ export default{
 	box-shadow: 0 1px 4px 2px rgba(0,34,207,.1);
 	border: none;
 	width: 150px;
-	height: 210px;
-	margin: 0 26px;
+	height: 230px;
+	margin: 0 1.3%;
 	display: inline-block;
 	transition: .2s;
 }
@@ -81,8 +82,18 @@ export default{
 	text-decoration: none;
 }
 .tokenCardTitle{
-	padding: 12px 20px;
-	font-size: 18px;
+	padding: 10px 20px;
+	font-size: 20px;
 }
->>>>>>> 062bfebad908a4ef64c6a5bf2b182fe6ea8c30fe
+
+.tokenCardTitle + div{
+	font-size: 14px;
+	padding: 0 22px;
+}
+
+.tokenCardTitle + div > div{
+	display: inline-block;
+	font-size: 12px;
+	padding-left: 6px;
+}
 </style>

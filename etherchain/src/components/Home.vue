@@ -54,15 +54,14 @@
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-    <app-cardCarousel></app-cardCarousel>
-    <div class="mainCard">
-      
-    </div>
-=======
-    <app-cardCarousel v-bind:cards="cardCarousel" ></app-cardCarousel>
+    <app-cardCarousel v-bind:cards="cardCarousel" >
+      <div class="showAll">
+        <a href="#"><div class="underline">查看全部<i class="ion-ios-arrow-forward"></i></div></a>
+        <div class="cardTitle">代币</div>
+      </div>
+      <hr>
+    </app-cardCarousel>
     <!-- <img v-attr="src:cardCarousel[0].data.img" alt=""> -->
->>>>>>> 062bfebad908a4ef64c6a5bf2b182fe6ea8c30fe
   </div>
 </template>
 
@@ -72,11 +71,7 @@ import cardCarousel from "./cardCarousel.vue"
 export default {
   name: 'hello',
   components:{
-<<<<<<< HEAD
-    "app-cardCarousel": cardCarousel,
-=======
     "app-cardCarousel":cardCarousel,
->>>>>>> 062bfebad908a4ef64c6a5bf2b182fe6ea8c30fe
   },
   data:function(){
     return{
@@ -183,7 +178,7 @@ export default {
             img:require('../assets/tokens/omg.svg'),
             price:{
               val:54.34,
-              change:-2.32,
+              change:+2.32,
               unit:"¥",
             },
           },
@@ -227,7 +222,7 @@ export default {
             img:require('../assets/tokens/omg.svg'),
             price:{
               val:54.34,
-              change:-2.32,
+              change:2.32,
               unit:"¥",
             },
           },
@@ -262,11 +257,7 @@ export default {
   box-shadow: 0 1px 3px 0 rgba(0,34,77,.05);
   border: 1px solid rgba(214,214,214,.6);
   padding: 40px 45px 30px 45px;
-<<<<<<< HEAD
-  margin: 20px auto;
-=======
   margin: 16px auto 10px auto;
->>>>>>> 062bfebad908a4ef64c6a5bf2b182fe6ea8c30fe
   background-color: #fff;
 }
 .narrow{
@@ -279,11 +270,7 @@ export default {
   border: 1px solid rgba(214,214,214,.6);
   padding: 40px 45px 30px 45px;
   width: 100%;
-<<<<<<< HEAD
-  margin: 0 auto;
-=======
   margin: 10px auto;
->>>>>>> 062bfebad908a4ef64c6a5bf2b182fe6ea8c30fe
 }
 
 
@@ -367,9 +354,11 @@ hr{
   font-size: 14px;
   /*display: inline-block;*/
   float: left;
+  transition: .2s;
 }
 .blueBlock:hover {
   background-color: #1038ff;
+  transition: .2s;
 }
 
 .blockDetail{
@@ -429,12 +418,16 @@ hr{
   color: #4c6bd8;
   margin-top: 2px;
 }
-
+.morePlus{
+  transition: .2s;
+}
 .morePlus:hover{
   background-color: #1038ff;
+  transition: .2s;
 }
 
 .morePlus:hover .ion-android-add{
   color: #fff;
+  transition: .2s;
 }
 </style>
