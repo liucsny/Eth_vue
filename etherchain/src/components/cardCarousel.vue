@@ -1,11 +1,19 @@
 <template>
 	<div class="mainCard">
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, corporis aut consectetur eum, voluptatem quaerat vel! Enim aut aliquam, voluptatum! Consequatur maxime alias esse mollitia dolorum nesciunt eaque ex? Consequuntur.</p>
+		<div class="cardCarousel">
+			<div v-for="token in cards">
+				<div>{{token.name}}</div>
+				<!-- {{token.data.img}} -->
+				<img :src="token.data.img" alt="omg">
+			</div>
+		</div>
 	</div>
 </template>
 
 <script>
-	
+export default{
+	props:["cards"],
+}
 </script>
 
 <style scoped>
@@ -15,5 +23,9 @@
 	padding: 40px 45px 30px 45px;
 	margin: 10px auto;
 	background-color: #fff;
+}
+
+.cardCarousel{
+	border:red 1px solid;
 }
 </style>

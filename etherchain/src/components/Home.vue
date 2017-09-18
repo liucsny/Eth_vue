@@ -54,7 +54,8 @@
         </div>
       </div>
     </div>
-    <app-cardCarousel></app-cardCarousel>
+    <app-cardCarousel v-bind:cards="cardCarousel" ></app-cardCarousel>
+    <!-- <img v-attr="src:cardCarousel[0].data.img" alt=""> -->
   </div>
 </template>
 
@@ -142,6 +143,19 @@ export default {
           ],
         ]
       },
+      cardCarousel:[
+        {
+          name:"OmiseGO",
+          data:{
+            img:require('../assets/tokens/omg.svg'),
+            price:{
+              val:54.34,
+              change:-2.32,
+              unit:"¥",
+            },
+          },
+        },
+      ],
     }
   },
   methods:{
