@@ -52,7 +52,7 @@ export default{
 
 .cardCarousel{
 	/*border:red 1px solid;*/
-	width:1630px;
+	width:160%;
 	margin-top: 30px;
 	transition: .5s;
 }
@@ -66,7 +66,7 @@ export default{
 	background-color: #fff;
 	box-shadow: 0 1px 4px 2px rgba(0,34,207,.1);
 	border: none;
-	width: 150px;
+	width: 9.8%;
 	height: 230px;
 	margin: 0 1.3%;
 	display: inline-block;
