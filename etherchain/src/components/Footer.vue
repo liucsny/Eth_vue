@@ -9,21 +9,17 @@
 
 <script>
 export default {
-  name: 'hello',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
-  }
 }
 </script>
 
 <style scoped>
 footer{
-  background-color: #7F7F7F;
-  height: 100px;
-  position: absolute;
+  background-color: white;
+  border-top: 1.5px solid rgba(214,214,214,.6);
+  height:300px;
   bottom: 0;
   width: 100%;
+  margin-top: 50px;
 }
+
 </style>

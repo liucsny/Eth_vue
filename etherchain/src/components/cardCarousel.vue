@@ -33,6 +33,7 @@ export default{
 			cardCarousel:{
 				position:0,
 				step:0,
+				amount:8,
 			},
 		}
 	},
@@ -85,8 +86,6 @@ export default{
 				}
 			}
 		})();
-
-
 	}
 }
 </script>

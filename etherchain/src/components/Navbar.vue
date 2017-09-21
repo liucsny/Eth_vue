@@ -137,18 +137,16 @@ nav{
 }
 
 .searchContainer{
-  margin:10px auto;
-  width: 94%;
+	display: flex;
+	margin:10px auto;
+	width: 97%;
 }
 
 .ion-ios-search-strong{
-	display: block;
-	float: left;
 	padding-right: 1.3%;
 }
 
 input[type="text"]{
-	display: block;
 	outline:none;
 	width: 97%;
 	font-size: 14px;

@@ -402,14 +402,13 @@ hr{
   padding: 0;
   text-align: center;
   padding:1px;
+  transition: .2s;
 }
 .ion-android-add{
   color: #4c6bd8;
   margin-top: 2px;
 }
-.morePlus{
-  transition: .2s;
-}
+
 .morePlus:hover{
   background-color: #1038ff;
   opacity: .8;
