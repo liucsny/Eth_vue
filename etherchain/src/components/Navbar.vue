@@ -1,7 +1,7 @@
 <template>
 	<nav>
 		<div class="container">
-			<a href="#"><div class="logoDiv"><img src="../assets/logo.svg" id="logo"></div></a>
+			<a href="#"><div class="logoDiv"><img src="../assets/logo2.svg" id="logo"></div></a>
 			<div class="navTab">
 				<ul>
 					<li><a href="#">首页</a></li>
@@ -73,7 +73,8 @@ nav{
 	box-sizing: border-box;
 	background: white;
 	height: 78px;
-    box-shadow: 0 1px 3px 0 rgba(0,34,77,.05);
+    box-shadow: 0 1px 10px 1px rgba(0,34,177,.08);
+    /*box-shadow: 0 1px 16px 4px rgba(0,34,207,.1);*/
 	border-bottom: 1px solid rgba(214,214,214,.6);
 	padding: 1px;
 }
@@ -116,7 +117,7 @@ nav{
 	display: block;
 	background-color: white;
 	padding: 6px 0;
-    box-shadow: 0 1px 3px 0 rgba(0,34,77,.1);
+    box-shadow: 0 1px 10px 1px rgba(0,34,177,.08);
 	border: 1px solid rgba(214,214,214,.6);
 }
 

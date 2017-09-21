@@ -123,7 +123,7 @@ export default{
 .card{
 	border:red 1px solid;
 	background-color: #fff;
-	box-shadow: 0 1px 4px 2px rgba(0,34,207,.1);
+	box-shadow: 0 1px 4px 2px rgba(0,34,107,.1);
 	border: none;
 	width: 9.8%;
 	height: 220px;
@@ -133,7 +133,7 @@ export default{
 }
 
 .card:hover{
-	box-shadow: 0 1px 16px 4px rgba(0,34,207,.1);
+	box-shadow: 0 1px 16px 4px rgba(0,34,107,.1);
 }
 
 .card > a{
