@@ -162,18 +162,18 @@ export default {
           },
         },
         {
-          name:"OmiseGO",
+          name:"Qtum",
           data:{
             img:require('../assets/tokens/omg.svg'),
             price:{
               val:54.34,
-              change:-2.32,
+              change:6.32,
               unit:"¥",
             },
           },
         },
         {
-          name:"OmiseGO",
+          name:"Qtum",
           data:{
             img:require('../assets/tokens/omg.svg'),
             price:{
@@ -402,16 +402,16 @@ hr{
   padding: 0;
   text-align: center;
   padding:1px;
+  transition: .2s;
 }
 .ion-android-add{
   color: #4c6bd8;
   margin-top: 2px;
 }
-.morePlus{
-  transition: .2s;
-}
+
 .morePlus:hover{
   background-color: #1038ff;
+  opacity: .8;
   transition: .2s;
 }
 

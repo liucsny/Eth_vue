@@ -33,28 +33,40 @@ export default{
 			cardCarousel:{
 				position:0,
 				step:0,
-				amount: 8,
+				amount:8,
 			},
 		}
 	},
 	methods:{
 		Arrow:function(direction){
 			let cardCarousel = document.getElementsByClassName("cardCarousel")[0];
+
 			let card = document.getElementsByClassName("card")[0],
 				width = card.offsetWidth,
 				marginLeft = window.getComputedStyle(card).marginLeft,
 				stepWidth = parseFloat(width) +parseFloat(marginLeft)*2;
 
+			let leftBtn = document.getElementsByClassName("ion-ios-arrow-left")[0],
+				rightBtn = document.getElementsByClassName("ion-ios-arrow-right")[0];
+
 			if (direction === "left") {
-				if(this.cardCarousel.position > 0 && this.cardCarousel.position <= this.cardCarousel.amount-5){
-					this.cardCarousel.position -= 1;
+				this.cardCarousel.position -= 1;
+				if(this.cardCarousel.position < this.cardCarousel.amount-5){
+					rightBtn.style.visibility = "visible";
 				}
-			} else {
-				if(this.cardCarousel.position >= 0 && this.cardCarousel.position < this.cardCarousel.amount-5){
-					this.cardCarousel.position += 1;
+				if(this.cardCarousel.position <= 0){
+					leftBtn.style.visibility = "hidden";
+				}
+			} else if(direction === "right") {
+				this.cardCarousel.position += 1;
+				if(this.cardCarousel.position <= 1){
+					leftBtn.style.visibility = "visible";
+				}else if(this.cardCarousel.position === this.cardCarousel.amount-5){
+					rightBtn.style.visibility = "hidden";
 				}
 			}
 
+			console.log(this.cardCarousel.position);
 			this.cardCarousel.step = stepWidth*this.cardCarousel.position;
 
 			cardCarousel.style.transform = "translate( -"+ this.cardCarousel.step +"px,0)";
@@ -149,6 +161,10 @@ export default{
 	font-size: 18px;
 }
 
+.ion-ios-arrow-left{
+	visibility:hidden;
+}
+
 .tokenCardTitle{
 	padding: 10px 20px;
 	font-size: 20px;
@@ -162,6 +178,6 @@ export default{
 .tokenCardTitle + div > div{
 	display: inline-block;
 	font-size: 12px;
-	padding-left: 6px;
+	padding: 0 0 20% 6px;
 }
 </style>
