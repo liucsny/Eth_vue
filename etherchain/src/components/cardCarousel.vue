@@ -67,7 +67,6 @@ export default{
 	box-shadow: 0 1px 4px 2px rgba(0,34,207,.1);
 	border: none;
 	width: 9.8%;
-	height: 230px;
 	margin: 0 1.3%;
 	display: inline-block;
 	transition: .2s;
@@ -94,6 +93,6 @@ export default{
 .tokenCardTitle + div > div{
 	display: inline-block;
 	font-size: 12px;
-	padding-left: 6px;
+	padding: 0 0 20% 6px;
 }
 </style>
