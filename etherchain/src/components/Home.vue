@@ -56,8 +56,8 @@
     </div>
     <app-cardCarousel v-bind:cards="cardCarousel" >
       <div class="showAll">
-        <a href="#"><div class="underline">查看全部<i class="ion-ios-arrow-forward"></i></div></a>
         <div class="cardTitle">代币</div>
+        <a href="#"><div class="underline">查看全部<i class="ion-ios-arrow-forward"></i></div></a>
       </div>
       <hr>
     </app-cardCarousel>
@@ -227,17 +227,6 @@ export default {
             },
           },
         },
-        {
-          name:"OmiseGO",
-          data:{
-            img:require('../assets/tokens/omg.svg'),
-            price:{
-              val:54.34,
-              change:-2.32,
-              unit:"¥",
-            },
-          },
-        },
       ],
     }
   },
@@ -315,7 +304,7 @@ export default {
 
 .showAll a{
   float: right;
-  margin-top: 8px;
+  margin-top: 6px;
   text-decoration: none;
   color:#4b5963; 
   font-size: 14px;
