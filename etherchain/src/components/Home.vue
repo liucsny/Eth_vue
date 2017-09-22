@@ -306,7 +306,7 @@ export default {
   float: right;
   margin-top: 6px;
   text-decoration: none;
-  color:#4b5963; 
+  color: #4b5963; 
   font-size: 14px;
 }
 
@@ -320,6 +320,7 @@ a{
 a:hover{
   color: #1038ff;
 }
+
 hr{
   border: 1px solid rgba(104,114,114,.2);
   border-top: none;
