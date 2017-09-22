@@ -36,6 +36,14 @@
 					<li><a href="#">其他</a></li>
 				</ul>
 			</div>
+			<div class="logIn"> 
+				<div>
+					<a href="#">注册</a>
+				</div>
+				<div>
+					<a href="#">登录</a>
+				</div>
+			</div>
 			<div class="searchContainer">		    
 				<i class="ion-ios-search-strong"></i>
 		    	<input type="text" placeholder="搜索以太坊地址、交易、区块、代币">
@@ -69,7 +77,7 @@ hr{
 }
 
 nav{
-	margin: 0 0 60px 0;
+	margin: 0 0 70px 0;
 	box-sizing: border-box;
 	background: white;
 	height: 78px;
@@ -99,7 +107,7 @@ nav{
 
 .navTab a{
 	display: inline-block;
-	padding: 32px 24px;
+	padding: 32px 22px;
 	text-decoration: none;
 	color:#455f75;
 }
@@ -137,9 +145,31 @@ nav{
 	padding: 24px;
 }
 
+
+
+.logIn{
+	float: right;
+}
+
+.logIn a{
+	display: inline-block;
+	padding: 32px 14px;
+	text-decoration: none;
+	color:#455f75;
+	font-size: 14px;
+}
+
+.logIn a:hover{
+	color: #1038ff;
+}
+
+.logIn > div{
+	display: inline-block;
+}
+
 .searchContainer{
 	display: flex;
-	margin:10px auto;
+	margin:20px auto;
 	width: 97%;
 }
 
