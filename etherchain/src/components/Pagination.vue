@@ -5,7 +5,7 @@
 
 			<div class="pagination paginationHover" @click="jumpToPage()" v-show="centerIndex!==1">1</div>
 
-			<div class="pagination" @click="jumpToPage()" v-show="centerIndex>3">...</div>
+			<div class="pagination" v-show="centerIndex>3">...</div>
 
 			<div class="pagination paginationHover" @click="jumpToPage()" v-show="centerIndex==list.listLenght">{{centerIndex-2}}</div>
 
@@ -17,17 +17,17 @@
 
 			<div class="pagination paginationHover" @click="jumpToPage()" v-show="centerIndex==1">{{centerIndex+2}}</div>
 
-			<div class="pagination" @click="jumpToPage()" v-show="centerIndex<list.listLenght-2">...</div>
+			<div class="pagination" v-show="centerIndex<list.listLenght-2">...</div>
 
 			<div class="pagination paginationHover" @click="jumpToPage()" v-show="centerIndex<list.listLenght-1">{{list.listLenght}}</div>
 
 			<div class="pagination paginationHover" @click="changePage('right')">下一页</div>
 		</div>
 		<div>
-			<div class="jumpTo">跳转到：</div>	
-			<input type="text" >
+			<div class="jumpTo">跳转到:</div>	
+			<input type="text" @keyup.enter="jumpToPageInput()">
 			<div class="jumpTo">页</div>
-			<div class="jumpTo"><i class="ion-android-arrow-forward"></i></div>
+			<!-- <div @click="jumpToPageInput" class="jumpTo"><i class="ion-android-arrow-forward"></i></div> -->
 		</div>
 	</div>
 </template>
@@ -51,10 +51,19 @@ export default{
 					this.centerIndex += 1;
 				}
 			}
-			console.log(this.centerIndex);
+			this.$emit("pageIndex",this.centerIndex);
 		},
 		jumpToPage: function(){
 			this.centerIndex = parseInt(event.target.innerHTML);
+			this.$emit("pageIndex",this.centerIndex);
+		},
+		jumpToPageInput:function(){
+			let pageIndex = parseInt(event.target.value);
+			if(pageIndex &&(pageIndex>0)&&(pageIndex<=this.list.listLenght)){
+				this.centerIndex = pageIndex;
+			}
+			event.target.value = "";
+			this.$emit("pageIndex",this.centerIndex);
 		},
 	}
 }
@@ -94,9 +103,15 @@ export default{
 	font-size: 14px;
 }
 
+.ion-android-arrow-forward{
+	font-size: 16px;
+	cursor: pointer;
+}
+
 input[type="text"]{
 	width: 50px;
 	outline:none;
+	text-align: center;
 	font-size: 15px;
 	font-weight: 500;
 	border-top:none;
