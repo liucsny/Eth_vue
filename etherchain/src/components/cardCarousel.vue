@@ -66,7 +66,6 @@ export default{
 				}
 			}
 
-			console.log(this.cardCarousel.position);
 			this.cardCarousel.step = stepWidth*this.cardCarousel.position;
 
 			cardCarousel.style.transform = "translate( -"+ this.cardCarousel.step +"px,0)";

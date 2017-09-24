@@ -25,14 +25,23 @@
 				<td>{{block.blockReward}} Ether</td>
 			</tr>
 		</table>
+		<app-pagination v-bind:list="List"></app-pagination>
 	</div>
 </template>
 
 <script>
+import Pagination from "./Pagination.vue"
+
 
 export default {
+	components:{
+		"app-pagination": Pagination,
+	},
 	data: function(){
 		return {
+			listPorperties:{
+				length:4,
+			},
 			blockList:[
 				{
 					blockHeight: 4254662,
@@ -354,7 +363,7 @@ export default {
 					hashRate: 92633.03,
 					blockReward: 5.41031,
 				},
-{
+				{
 					blockHeight: 4254662,
 					time: "23秒前",
 					transactions: 216,
@@ -687,7 +696,13 @@ export default {
 	},
 	computed:{
 		shortBlockList:function(){
-			return this.blockList.splice(0, 20)
+			return this.blockList.splice(0, this.listPorperties.length)
+		},
+		List:function(){
+			let listLenght = Math.ceil(this.blockList.length/this.listPorperties.length);
+			return {
+				listLenght,
+			}
 		}
 	}
 }
