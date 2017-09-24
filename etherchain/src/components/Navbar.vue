@@ -1,47 +1,49 @@
 <template>
 	<nav>
 		<div class="container">
-			<a href="#"><div class="logoDiv"><img src="../assets/logo2.svg" id="logo"></div></a>
-			<div class="navTab">
-				<ul>
-					<li><a href="#">首页</a></li>
-					<li>
-						<a href="#">区块链<i class="ion-ios-arrow-down"></i></a>
-						<ul class="subMenu">
-							<li><a href="#">查询区块</a></li>
-							<li><a href="#">查询叔块</a></li>
-							<hr/>
-							<li><a href="#">查询完成交易</a></li>
-							<li><a href="#">查询进行交易</a></li>
-							<li><a href="#">查询合约内交易</a></li>
-						</ul>
-					</li>
-					<li>
-						<a href="#">地址<i class="ion-ios-arrow-down"></i></a>
-						<ul class="subMenu">
-							<li><a href="#">地址列表</a></li>
-							<li><a href="#">普通地址</a></li>
-							<li><a href="#">合约地址</a></li>
-						</ul>
-					</li>
-					<li>
-						<a href="#">代币<i class="ion-ios-arrow-down"></i></a>
-						<ul class="subMenu">
-							<li><a href="#">代币列表</a></li>
-							<li><a href="#">代币交易</a></li>
-							<li><a href="#">代币持有者</a></li>
-						</ul>
-					</li>
-					<li><a href="#">图表</a></li>
-					<li><a href="#">其他</a></li>
-				</ul>
-			</div>
-			<div class="logIn"> 
-				<div>
-					<a href="#">注册</a>
+			<div class="fixedNav">
+				<a href="#"><div class="logoDiv"><img src="../assets/logo2.svg" id="logo"></div></a>
+				<div class="navTab">
+					<ul>
+						<li><a href="#">首页</a></li>
+						<li>
+							<a href="#">区块链<i class="ion-ios-arrow-down"></i></a>
+							<ul class="subMenu">
+								<li><a href="#">查询区块</a></li>
+								<li><a href="#">查询叔块</a></li>
+								<hr/>
+								<li><a href="#">查询完成交易</a></li>
+								<li><a href="#">查询进行交易</a></li>
+								<li><a href="#">查询合约内交易</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">地址<i class="ion-ios-arrow-down"></i></a>
+							<ul class="subMenu">
+								<li><a href="#">地址列表</a></li>
+								<li><a href="#">普通地址</a></li>
+								<li><a href="#">合约地址</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">代币<i class="ion-ios-arrow-down"></i></a>
+							<ul class="subMenu">
+								<li><a href="#">代币列表</a></li>
+								<li><a href="#">代币交易</a></li>
+								<li><a href="#">代币持有者</a></li>
+							</ul>
+						</li>
+						<li><a href="#">图表</a></li>
+						<li><a href="#">其他</a></li>
+					</ul>
 				</div>
-				<div>
-					<a href="#">登录</a>
+				<div class="logIn"> 
+					<div>
+						<a href="#">注册</a>
+					</div>
+					<div>
+						<a href="#">登录</a>
+					</div>
 				</div>
 			</div>
 			<div class="searchContainer">		    
@@ -144,8 +146,6 @@ nav{
 .subMenu li a{
 	padding: 24px;
 }
-
-
 
 .logIn{
 	float: right;

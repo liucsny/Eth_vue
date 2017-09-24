@@ -7,7 +7,7 @@
 
 			<div class="pagination" v-show="centerIndex>3">...</div>
 
-			<div class="pagination paginationHover" @click="jumpToPage()" v-show="centerIndex==list.listLenght">{{centerIndex-2}}</div>
+			<div class="pagination paginationHover" @click="jumpToPage()" v-show="(list>3)&&(centerIndex==list.listLenght)">{{centerIndex-2}}</div>
 
 			<div class="pagination paginationHover" @click="jumpToPage()" v-show="centerIndex>2">{{centerIndex-1}}</div>
 
@@ -15,7 +15,7 @@
 
 			<div class="pagination paginationHover" @click="jumpToPage()" v-show="centerIndex !== list.listLenght">{{centerIndex+1}}</div>
 
-			<div class="pagination paginationHover" @click="jumpToPage()" v-show="centerIndex==1">{{centerIndex+2}}</div>
+			<div class="pagination paginationHover" @click="jumpToPage()" v-show="(list>3)&&(centerIndex==1)">{{centerIndex+2}}</div>
 
 			<div class="pagination" v-show="centerIndex<list.listLenght-2">...</div>
 
@@ -80,7 +80,7 @@ export default{
 	width: fit-content;
 	margin: 0 auto;
 	display: inline-flex;
-	margin-top: 10px;
+	margin-top: 20px;
 }
 .pagination{
 	margin: 5px;
@@ -119,6 +119,7 @@ input[type="text"]{
 	border-right:none;
 	border-bottom: 1px solid #abaaba;
 	color: #4c6bd8;
+	padding-bottom: 0;
 }
 
 
