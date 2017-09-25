@@ -164,7 +164,7 @@ export default {
         {
           name:"Qtum",
           data:{
-            img:require('../assets/tokens/omg.svg'),
+            img:require('../assets/tokens/qtum.svg'),
             price:{
               val:54.34,
               change:6.32,
@@ -173,9 +173,9 @@ export default {
           },
         },
         {
-          name:"Qtum",
+          name:"Golem",
           data:{
-            img:require('../assets/tokens/omg.svg'),
+            img:require('../assets/tokens/golem.svg'),
             price:{
               val:54.34,
               change:+2.32,
@@ -184,9 +184,9 @@ export default {
           },
         },
         {
-          name:"OmiseGO",
+          name:"Tenx Pay",
           data:{
-            img:require('../assets/tokens/omg.svg'),
+            img:require('../assets/tokens/tenxpay.svg'),
             price:{
               val:54.34,
               change:-2.32,
@@ -195,9 +195,9 @@ export default {
           },
         },
         {
-          name:"OmiseGO",
+          name:"EOS",
           data:{
-            img:require('../assets/tokens/omg.svg'),
+            img:require('../assets/tokens/eos.svg'),
             price:{
               val:54.34,
               change:-2.32,
@@ -206,9 +206,9 @@ export default {
           },
         },
         {
-          name:"OmiseGO",
+          name:"Digix",
           data:{
-            img:require('../assets/tokens/omg.svg'),
+            img:require('../assets/tokens/dgd.svg'),
             price:{
               val:54.34,
               change:-2.32,
@@ -217,9 +217,9 @@ export default {
           },
         },
         {
-          name:"OmiseGO",
+          name:"BAT",
           data:{
-            img:require('../assets/tokens/omg.svg'),
+            img:require('../assets/tokens/bat.svg'),
             price:{
               val:54.34,
               change:2.32,

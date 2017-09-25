@@ -146,6 +146,7 @@ export default{
 
 input[type="text"]{
 	width: 620%;
+	height: 26px;
 	border: 1px solid #E6E6E6;
 }
 
