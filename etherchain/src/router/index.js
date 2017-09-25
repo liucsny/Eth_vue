@@ -3,6 +3,8 @@ import Router from 'vue-router'
 import Home from '@/components/Home'
 import blockList from "@/components/blockList.vue"
 import blockDetail from "@/components/blockDetail.vue"
+import transactionDetail from "@/components/transactionDetail.vue"
+
 
 Vue.use(Router)
 
@@ -22,6 +24,11 @@ export default new Router({
       path: '/blockdetail',
       name: 'blockDetail',
       component: blockDetail
+    },
+    {
+      path: '/transactiondetail',
+      name: 'transactionDetail',
+      component: transactionDetail
     },
   ]
 })
