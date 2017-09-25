@@ -8,10 +8,7 @@
 			<div class="cardItem"> 时间戳：</div>
 			<div class="cardData">{{blockData.timeStamp}}</div>
 		</div>
-		<div class="cardDetail">
-			<div class="cardItem"> 交易：</div>
-			<div class="cardData">{{blockData.transaction.transactions}}笔区块交易 和 {{blockData.transaction.contractInternal}}笔合约内交易</div>
-		</div>
+		<slot></slot>
 		<div class="cardDetail">
 			<div class="cardItem"> 哈希：</div>
 			<div class="cardData">{{blockData.hash}}</div>
@@ -97,7 +94,7 @@ export default{
 }
 
 .cardDetail{
-	padding: 20px 3% 20px 3%;
+	padding: 26px 3% 26px 3%;
 }
 
 .cardDetail:nth-child(even){

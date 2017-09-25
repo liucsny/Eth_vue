@@ -10,7 +10,12 @@
 				<div @click="selectedComponent = 'app-blockDetailInfo',switchTab(1)" class="tab" :class="{activeTab:tabSwitch}">信息</div>
 			</div>
 
-			<component :is="selectedComponent" :blockData="blockData" :transactionList="transactionList"></component>
+			<component :is="selectedComponent" :blockData="blockData" :transactionList="transactionList">
+				<div class="cardDetail">
+					<div class="cardItem"> 交易：</div>
+					<div class="cardData" @click="selectedComponent = 'app-blockDetailList',switchTab(0)">{{blockData.transaction.transactions}}笔区块交易 和 {{blockData.transaction.contractInternal}}笔合约内交易</div>
+				</div>
+			</component>
 		</div>
 	</div>
 </template>
@@ -1157,7 +1162,7 @@ export default{
 	font-size: 18px;
 	cursor: pointer;
 	margin: 0 20px 10px 20px;
-	padding: 5px 10px;
+	padding: 5px 15px;
 	opacity: .3;
 	transition: .1s;
 }
@@ -1169,10 +1174,10 @@ export default{
 }
 
 .cardDetail{
-	padding: 20px 3% 20px 3%;
+	padding: 26px 3% 26px 3%;
 }
 
-.cardDetail:nth-child(odd){
+.cardDetail:nth-child(even){
 	background-color: #F5F8FC;
 }
 
