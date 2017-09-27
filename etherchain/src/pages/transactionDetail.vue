@@ -89,7 +89,7 @@ export default{
 }
 </script>
 
-<style>
+<style scoped>
 .narrow{
 	width: 84%;
 }

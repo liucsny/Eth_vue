@@ -21,8 +21,8 @@
 </template>
 
 <script>
-import blockDetailInfo from "./blockDetailInfo.vue"
-import blockDetailList from "./blockDetailList.vue"
+import blockDetailInfo from "../components/blockDetailInfo.vue"
+import blockDetailList from "../components/blockDetailList.vue"
 
 export default{
 	data:function(){

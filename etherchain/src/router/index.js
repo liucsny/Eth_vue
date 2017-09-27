@@ -1,9 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/components/Home'
-import blockList from "@/components/blockList.vue"
-import blockDetail from "@/components/blockDetail.vue"
-import transactionDetail from "@/components/transactionDetail.vue"
+import Home from '@/pages/Home'
+import blockList from "@/pages/blockList.vue"
+import blockDetail from "@/pages/blockDetail.vue"
+import transactionDetail from "@/pages/transactionDetail.vue"
+import account from "@/pages/account.vue"
+
 
 
 Vue.use(Router)
@@ -29,6 +31,11 @@ export default new Router({
       path: '/transactiondetail',
       name: 'transactionDetail',
       component: transactionDetail
+    },
+    {
+      path: '/account',
+      name: 'account',
+      component: account
     },
   ]
 })

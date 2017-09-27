@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import Pagination from "./Pagination.vue"
+import Pagination from "../components/Pagination.vue"
 
 
 export default {
