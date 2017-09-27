@@ -66,7 +66,7 @@
 </template>
 
 <script>
-import cardCarousel from "./cardCarousel.vue"
+import cardCarousel from "../components/cardCarousel.vue"
 
 export default {
   name: 'hello',
@@ -238,6 +238,9 @@ export default {
       return str;
     },
   },
+  created:function(){
+    this.getData();
+  }
 }
 </script>
 
