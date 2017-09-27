@@ -1177,10 +1177,6 @@ export default{
 	padding: 26px 3% 26px 3%;
 }
 
-.cardDetail:nth-child(even){
-	background-color: #F5F8FC;
-}
-
 .cardItem{
 	width: 15%;
 }
