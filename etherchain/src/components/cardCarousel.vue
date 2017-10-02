@@ -90,13 +90,6 @@ export default{
 </script>
 
 <style scoped>
-.mainCard{
-	box-shadow: 0 1px 3px 0 rgba(0,34,77,.05);
-	border: 1px solid rgba(214,214,214,.6);
-	padding: 40px 45px 30px 45px;
-	margin: 10px auto;
-	background-color: #fff;
-}
 
 .mainCard > div{
 	display: flex;

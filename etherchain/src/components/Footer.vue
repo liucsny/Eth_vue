@@ -37,10 +37,6 @@ footer{
   margin: auto;
 }
 
-.col-md-2{
-  /*border: red 1px solid;*/
-}
-
 .img{
   margin: 30px 80px 30px 10px;
 }

@@ -1264,14 +1264,6 @@ export default {
 </script>
 
 <style scoped>
-.narrow{
-	width: 84%;
-}
-#pageName{
-	font-size: 36px;
-	color: #67666e;
-	margin: 100px 0 30px 0;
-}
 
 table{
 	border-collapse: collapse;
