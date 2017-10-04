@@ -1238,12 +1238,6 @@ export default {
 		}
 	},
 	methods:{
-		compressString:function(str,limit){
-			if(str.length>limit){
-				return str.substr(0,limit)+"...";
-			}
-				return str;
-		},
 		changeBeginPoint:function(beginPoint){
 			this.beginPoint = (beginPoint-1)*this.listPorperties.length;
 			console.log(this.beginPoint);

@@ -230,17 +230,7 @@ export default {
       ],
     }
   },
-  methods:{
-    compressString:function(str,limit){
-      if(str.length>limit){
-        return str.substr(0,limit)+"...";
-      }
-      return str;
-    },
-  },
-  created:function(){
-    this.getData();
-  }
+
 }
 </script>
 
