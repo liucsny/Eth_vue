@@ -36,7 +36,7 @@ export default{
 		return {
 			beginPoint: 0,
 			listPorperties:{
-				length:30,
+				length:20,
 			},
 		}
 	},
