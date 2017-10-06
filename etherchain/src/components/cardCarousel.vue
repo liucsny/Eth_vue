@@ -79,9 +79,10 @@ export default{
 			for(let ele of elemChanged){
 				if(ele.innerHTML>0){
 					ele.style.color="green";
-					ele.innerHTML = "+" + ele.innerHTML;
+					ele.innerHTML = "+" + ele.innerHTML + "%";
 				}else{
 					ele.style.color="red";
+					ele.innerHTML = ele.innerHTML + "%";
 				}
 			}
 		})();

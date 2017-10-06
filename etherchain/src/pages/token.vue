@@ -1,7 +1,7 @@
 <template>
 	<div class="container narrow">
 		<div id ="pageName">
-			代币交易查询
+			代币查询
 		</div>
 		<div class="mainCard">
 			<div>
@@ -13,11 +13,43 @@
 				</div>
 			</div>
 			<div class="tokenDataContainer">
-				<div class="tokenData"></div>
+				<div class="tokenData">
+					<div class="tokenDataPrice">{{token.price.unit}} {{token.price.val}}
+						<div class="change tokenDataChange">{{token.price.change}}</div>
+					</div>
+					<div class="tokenDataBTCPrice">{{token.btcPrice.val}} BTC
+						<div class="change tokenDataBTCChange">{{token.btcPrice.change}}</div>
+					</div>
+				</div>
 				<div class="divider"></div>
-				<div class="tokenData"></div>
+				<div class="tokenData">
+					<div class="tokenDataName">
+						<div class="tokenDataDetail">代币持有：</div>
+						<div class="tokenDataDetail">交易数：</div>
+						<div class="tokenDataDetail">代币位数：</div>
+					</div>
+					<div class="tokenDataValue">
+						<div class="tokenDataDetail">{{token.holder}} 个地址</div>
+						<div class="tokenDataDetail">{{token.transaction}}</div>
+						<div class="tokenDataDetail">{{token.decimals}}</div>
+					</div>
+				</div>
 				<div class="divider"></div>
-				<div class="tokenData"></div>
+				<div class="tokenData">
+					<div class="tokenDataName">
+						<div class="tokenDataDetail">总市值：</div>
+						<div class="tokenDataDetail">代币已供应量：</div>
+						<div class="tokenDataDetail">代币总供应量：</div>
+					</div>
+					<div class="tokenDataValue">
+						<div class="tokenDataDetail">¥ {{token.marketCap}}</div>
+						<div class="tokenDataDetail">{{token.supply.current}}</div>
+						<div class="tokenDataDetail">{{token.supply.total}}</div>
+					</div>
+				</div>
+			</div>
+			<div>
+				chartArea
 			</div>
 		</div>
 		<div class="mainCard">
@@ -44,8 +76,26 @@ export default{
 		return {
 			token:{
 				name:"QTUM",
+				unit:"QTUM",
 				img:require("../assets/tokens/qtum.svg"),
 				adress:"0x6B9EF02657339310E28a7A9D4B5f25F7c1F68d61",
+				price: {
+	              val:54.34,
+	              change:+2.32,
+	              unit:"¥",
+	            },
+	            btcPrice: {
+	              val:0.0006743240,
+	              change: -0.32,
+	            },
+	            holder:65265,
+	            transaction:252092,
+	            decimals: 18,
+	            marketCap: 6247329942,
+	            supply: {
+	            	current: 59000000,
+	            	total:100000000,
+	            }
 			},
 			selectedComponent: "app-list",
 			activeTab:1,
@@ -1130,6 +1180,18 @@ export default{
 			searchIcon.style.borderBottom = "none";
 		}
 	},
+	mounted:function(){
+		let elemChanged = document.getElementsByClassName('change');
+		for(let ele of elemChanged){
+			if(ele.innerHTML>0){
+				ele.style.color="green";
+				ele.innerHTML = "(+" + ele.innerHTML +"%)";
+			}else{
+				ele.style.color="red";
+				ele.innerHTML = "(" + ele.innerHTML + "%)";	
+			}
+		}
+	}
 }
 </script>
 
@@ -1164,8 +1226,35 @@ export default{
 .tokenData{
 	/*border: 1px red solid;*/
 	width: 33%;
-	height: 200px;
+	height: 130px;
+	padding: 20px;
 }
+
+.tokenDataDetail{
+	font-size: 14px;
+	padding: 4px;
+}
+
+.tokenDataPrice{
+	font-size: 32px;
+}
+.tokenDataChange{
+	display: inline-block;
+	font-size: 18px;
+}
+
+.tokenDataBTCChange{
+	display: inline-block;
+	font-size: 12px;
+}
+
+
+.tokenDataName,.tokenDataValue{
+	/*border:red solid 1px;*/
+	vertical-align: top;
+	display: inline-block;
+}
+
 
 
 .tabContainer{
