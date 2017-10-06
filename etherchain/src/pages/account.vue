@@ -3,6 +3,16 @@
 		<div id ="pageName">
 			账户查询
 		</div>
+		<div v-if="contractAccount.status" class="mainCard contractCard">
+			<img :src="contractAccount.img" alt="">
+			<div class="contractCardInfo">
+				<div class="contractCardTitle">
+					{{contractAccount.name}} 智能合约地址
+				</div>
+				<div class="contractCardDetail">合约创建：由 <a class="link" href="#">{{compressString(contractAccount.creation.account,7)}}</a> 于交易 <a class="link" href="#">{{compressString(contractAccount.creation.transaction,7)}}</a> 创建</div>
+				<div class="contractCardDetail">联系方式：</div>
+			</div>
+		</div>
 		<div class="mainCard">
 			<div class="valueInt">¥ {{parseInt(account.value)}}</div>
 			<div class="valueDigi">.{{account.value.toString().split(".")[1]}}</div>
@@ -33,6 +43,7 @@
 				<div @click="activeTab=2" :class="{tabActive:(activeTab===2),tabInactive:!(activeTab===2)}">代币交易</div>
 				<div @click="activeTab=3" :class="{tabActive:(activeTab===3),tabInactive:!(activeTab===3)}">获得区块</div>
 				<div @click="activeTab=4" :class="{tabActive:(activeTab===4),tabInactive:!(activeTab===4)}">获得数块</div>
+				<div v-if="contractAccount.status" @click="activeTab=5" :class="{tabActive:(activeTab===5),tabInactive:!(activeTab===5)}">智能合约</div>
 				<input @blur="inputBlur" class="subSearch subSearchHidden" type="text" placeholder="搜索账户信息">
 				<i @click="iconClicked" class="ion-ios-search-strong"></i>
 			</div>
@@ -50,6 +61,15 @@ export default{
 	},
 	data:function() {
 		return {
+			contractAccount:{
+				status:true,
+				name:"BAT",
+				img:require("../assets/tokens/bat.svg"),
+				creation:{
+					account:"0x6B9EF02657339310E28a7A9D4B5f25F7c1F68d61",
+					transaction:"0x8fc9ffbdce5b13c500c9df6bfc145d66d3d4ef73d8c5bb14e87029864b4b4892"
+				},
+			},
 			selectedComponent: "app-list",
 			activeTab:1,
 			account:{
@@ -1259,6 +1279,7 @@ export default{
 	margin-right: 5px;
 	font-size: 18px;
 	float: right;
+	cursor: pointer;
 }
 .subSearch{
 	transition: width ease .2s;
@@ -1297,4 +1318,66 @@ export default{
 	width: 0px;
 }
 
+.contractCard>img{
+	margin: 0;
+	padding: 0;
+	height: 160px;
+	max-width: 180px;
+	display: inline-block;
+}
+
+
+.contractCard{
+	padding: 0;
+}
+
+.contractCardInfo{
+	vertical-align: top;
+	/*border: 1px red solid;*/
+	display: inline-block;
+	padding: 10px 20px 10px 20px;
+}
+
+.contractCardTitle{
+	font-size: 30px;
+	/*border: 1px red solid;*/
+	display: inline-block;
+	padding: 24px 20px 10px 20px;
+}
+
+.contractCardDetail{
+	font-size: 14px;
+	padding: 0 20px 10px 20px;
+
+}
+
 </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

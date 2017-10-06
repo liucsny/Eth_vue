@@ -15,10 +15,10 @@
 				<th>区块奖励</th>
 			</tr>
 			<tr v-for="block in shortBlockList">
-				<td><a href="#">{{block.blockHeight}}</a></td>
+				<td><a class="link" href="#">{{block.blockHeight}}</a></td>
 				<td>{{block.time}}</td>
-				<td><a href="#">{{block.transactions}}</a></td>
-				<td><a href="#">{{compressString(block.miner,10)}}</a></td>
+				<td><a class="link" href="#">{{block.transactions}}</a></td>
+				<td><a class="link" href="#">{{compressString(block.miner,10)}}</a></td>
 				<td>{{block.gasLimit}}</td>
 				<td>{{block.difficulty}} TH</td>
 				<td>{{block.hashRate}} GH/s</td>
@@ -1284,14 +1284,5 @@ tr > th{
 tr > td{
 	padding: 15px 0;
 	text-align: center;
-}
-
-tr > td > a{
-	color: #4c6bd8;
-	text-decoration: none;
-}
-tr > td > a:hover{
-	color: #1038ff;
-	text-decoration: underline;
 }
 </style>

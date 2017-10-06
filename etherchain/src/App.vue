@@ -49,5 +49,12 @@ body,html{
   color: #67666e;
   margin: 100px 0 30px 0;
 }
-
+.link{
+  color: #4c6bd8;
+  text-decoration: none;
+}
+.link:hover{
+  color: #1038ff;
+  text-decoration: underline;
+}
 </style>
