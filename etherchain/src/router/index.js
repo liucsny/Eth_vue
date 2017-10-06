@@ -5,6 +5,7 @@ import blockList from "@/pages/blockList.vue"
 import blockDetail from "@/pages/blockDetail.vue"
 import transactionDetail from "@/pages/transactionDetail.vue"
 import account from "@/pages/account.vue"
+import token from "@/pages/token.vue"
 
 
 
@@ -36,6 +37,11 @@ export default new Router({
       path: '/account',
       name: 'account',
       component: account
+    },
+    {
+      path: '/token',
+      name: 'token',
+      component: token
     },
   ]
 })
