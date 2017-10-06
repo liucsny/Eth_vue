@@ -6,7 +6,7 @@
         <div v-for="(datum,name) in ethereum.data">
           <div class="cardSmallTitle">{{name}}</div>
           <div class="cardData">
-            <a href="#"><div class="underline">{{datum.val}}</div></a>
+            <a href="#"><div class="underline">{{numSeparator(datum.val)}}</div></a>
             <div class="cardUnit">{{datum.unit}}</div>
           </div>
         </div>
@@ -21,7 +21,7 @@
           </div>
           <hr>
           <div class="blockData" v-for="item in blocks.data">
-            <a href="#"><div class="blueBlock">{{item[0].name}} {{item[0].val}}</div></a>
+            <a href="#"><div class="blueBlock">{{item[0].name}} {{numSeparator(item[0].val)}}</div></a>
             <div class="blockDetail">
               <div>{{item[1].name}}: <a href="#"><div class="underline">{{compressString(item[1].val,12)}}</div></a></div>
               <div>{{item[2].name}}: <a href="#"><div class="underline">{{item[2].val}}{{item[2].unit}}</div></a></div>

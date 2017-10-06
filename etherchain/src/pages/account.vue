@@ -14,7 +14,7 @@
 			</div>
 		</div>
 		<div class="mainCard">
-			<div class="valueInt">¥ {{parseInt(account.value)}}</div>
+			<div class="valueInt">¥ {{numSeparator(parseInt(account.value))}}</div>
 			<div class="valueDigi">.{{account.value.toString().split(".")[1]}}</div>
 			<div class="cardIcon">
 				<i class="ion-android-create"></i>
@@ -24,11 +24,11 @@
 				<div class="accountDetail">
 					<div class="detail">地&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp址：&nbsp&nbsp{{account.adress}} <img class="qrCode" src="../assets/icons/qrCode.svg" alt=""></div>
 					<div class="detail">挖矿获得：&nbsp&nbsp区块{{account.mined.block}}&nbsp&nbsp叔块{{account.mined.uncles}}</div>
-					<div class="detail">交易次数：&nbsp&nbsp{{account.transactions}}次</div>
+					<div class="detail">交易次数：&nbsp&nbsp{{numSeparator(account.transactions)}}次</div>
 					<div class="detail">
 						<div class="assetsTitle">资&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp产：</div>
 						<div class="assets">
-							<div v-for="(item,property) of account.assets">{{property}}: {{item.val}} {{item.unit}}</div>
+							<div v-for="(item,property) of account.assets">{{property}}: {{numSeparator(item.val)}} {{item.unit}}</div>
 						</div>
 					</div>
 				</div>

@@ -29,9 +29,9 @@
 						<div class="tokenDataDetail">代币位数：</div>
 					</div>
 					<div class="tokenDataValue">
-						<div class="tokenDataDetail">{{token.holder}} 个地址</div>
-						<div class="tokenDataDetail">{{token.transaction}}</div>
-						<div class="tokenDataDetail">{{token.decimals}}</div>
+						<div class="tokenDataDetail">{{numSeparator(token.holder)}} 个地址</div>
+						<div class="tokenDataDetail">{{numSeparator(token.transaction)}}</div>
+						<div class="tokenDataDetail">{{numSeparator(token.decimals)}}</div>
 					</div>
 				</div>
 				<div class="divider"></div>
@@ -42,9 +42,9 @@
 						<div class="tokenDataDetail">代币总供应量：</div>
 					</div>
 					<div class="tokenDataValue">
-						<div class="tokenDataDetail">¥ {{token.marketCap}}</div>
-						<div class="tokenDataDetail">{{token.supply.current}}</div>
-						<div class="tokenDataDetail">{{token.supply.total}}</div>
+						<div class="tokenDataDetail">¥ {{numSeparator(token.marketCap)}}</div>
+						<div class="tokenDataDetail">{{numSeparator(token.supply.current)}}</div>
+						<div class="tokenDataDetail">{{numSeparator(token.supply.total)}}</div>
 					</div>
 				</div>
 			</div>

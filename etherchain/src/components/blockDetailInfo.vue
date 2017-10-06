@@ -27,23 +27,23 @@
 		</div>
 		<div class="cardDetail">
 			<div class="cardItem"> 难度：</div>
-			<div class="cardData">{{blockData.difficulty}}</div>
+			<div class="cardData">{{numSeparator(blockData.difficulty)}}</div>
 		</div>
 		<div class="cardDetail">
 			<div class="cardItem"> 总难度：</div>
-			<div class="cardData">{{blockData.totalDifficulty}}</div>
+			<div class="cardData">{{numSeparator(blockData.totalDifficulty)}}</div>
 		</div>
 		<div class="cardDetail">
 			<div class="cardItem"> 区块大小：</div>
-			<div class="cardData">{{blockData.Size}} byte</div>
+			<div class="cardData">{{numSeparator(blockData.Size)}} byte</div>
 		</div>
 		<div class="cardDetail">
 			<div class="cardItem"> Gas Used：</div>
-			<div class="cardData">{{blockData.gasUsed}}</div>
+			<div class="cardData">{{numSeparator(blockData.gasUsed)}}</div>
 		</div>
 		<div class="cardDetail">
 			<div class="cardItem"> Gas Limit：</div>
-			<div class="cardData">{{blockData.gasLimit}}</div>
+			<div class="cardData">{{numSeparator(blockData.gasLimit)}}</div>
 		</div>
 		<div class="cardDetail">
 			<div class="cardItem"> Nonce：</div>

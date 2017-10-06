@@ -6,5 +6,8 @@ export default{
 		}
 		return str;
     };
+	Vue.prototype.numSeparator = function(num){  
+	    return num && num.toString().replace(/^\d+/g, (m) => m.replace(/(?=(?!^)(\d{3})+$)/g, ','));
+	};
   }
 }
